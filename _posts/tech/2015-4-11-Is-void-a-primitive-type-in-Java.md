@@ -9,12 +9,12 @@ Java是面向对象的语言，它主要包含两种数据类型，**引用类�
 ####Java Language Specification
 我首先想到的是最权威的**Java Language Specification**，但是这里面并没有列出基础数据类型，void只是出现在了Java关键字列表中。
 ####Java API
-我又去查了[Java的官方API文档]（http://docs.oracle.com/javase/8/docs/api/），在java.lang包里找到了Void类，里面是这样说的：
+我又去查了[Java的官方API文档](http://docs.oracle.com/javase/8/docs/api/)，在java.lang包里找到了Void类，里面是这样说的：
 >The Void class is an uninstantiable placeholder class to hold a reference to the Class object representing the Java keyword void.
 
 也就是说，Void是一个占位类，它持有一个关键字void对应的Class对象。那么，我们可以认为，void不是基础数据类型。
 ####Android API
-接着我又查了[Android的官方API文档]（http://developer.android.com/reference/java/lang/Void.html），Google修改了不少Java标准的API，我们可以看看Google的工程师是怎么想的。类的简介中说:
+接着我又查了[Android的官方API文档](http://developer.android.com/reference/java/lang/Void.html)，Google修改了不少Java标准的API，我们可以看看Google的工程师是怎么想的。类的简介中说:
 >Placeholder class for the Java keyword void.
 
 但是在解释类成员变量TYPE的时候，是这样描述的：
@@ -23,13 +23,15 @@ Java是面向对象的语言，它主要包含两种数据类型，**引用类�
 这里将void称为基础数据类型，那么void究竟是不是基础数据类型呢，我又有点疑惑了。
 ####程序验证
 所以我又尝试着自己写程序验证：
-```Java
+
+```java
 public class VoidTest {
     public static void main (String [] args ) {
         System.out.println("Is void primitive type?" + (void.class.isPrimitive() ? "YES" : "NO"));
     }
 }
 ```
+
 输出的结果是**‘Is void primitive type? YES’**，这里Java又告诉我void是基础数据类型。那么让我们再来看看Class类的文档，找到isPrimitive()方法：
 >**isPrimitive**
 >
