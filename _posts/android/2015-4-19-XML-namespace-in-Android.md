@@ -20,9 +20,9 @@ category: android
 </RelativeLayout>
 ```
 
-在使用Eclipse的时候，我曾经就有疑问，上面的*xmlns:android="http://schemas.android.com/apk/res/android"*是什么意思。这篇博客就是简单的介绍一下Android XML文件的命名空间是什么以及如何使用。
+在使用Eclipse的时候，我曾经就有疑问，上面的**xmlns:android="http://schemas.android.com/apk/res/android"**是什么意思。这篇博客就是简单的介绍一下Android XML文件的命名空间是什么以及如何使用。
 
-###XML namespace
+##XML namespace
 xmlns即XML namespace，也就是XML文件的命名空间，这是XML通用的一个特性，并非Android的资源文件特有。XML命名空间使用URI引用来标识，是加在XML元素和元素的属性上的约束。注意，URI是Identifier，所以，虽然通常会有 *http://* 的字符出现，但不一定会像URL一样指向特定的资源。XML的元素和元素的属性，属于不同的命名空间，就可以拥有不同的意义，甚至可以进行自定义，另外这样做也可以防止冲突。
 
 我们可以这样定义XML namespace：
@@ -43,14 +43,15 @@ xmlns即XML namespace，也就是XML文件的命名空间，这是XML通用的�
 
 这样XML的解析器就可以根据不同的命名空间来进行解析工作了。其实，这和Java中类的全限定名有些类似，可以有相同的类名，只要它们处于不同的包中，就还是两个不同的类，JVM是通过类的全限定名来加载类的。
 
-###Android资源文件的命名空间
+##Android资源文件的命名空间
 
-####xmlns:android="http://schemas.android.com/apk/res/android"
+###xmlns:android="http://schemas.android.com/apk/res/android"
 这是Android的Framework层解析XML布局文件默认的命名空间，android是它的别名，所以在View的属性前都会有*android:*的前缀，你也可以取其它的名字，但是这个命名空间的字符串标识符是唯一、不可更改的。
 
-####xmlns:tools="http://schemas.android.com/tools"
+###xmlns:tools="http://schemas.android.com/tools"
 Android还有另外一个常用的命名空间，URI是*"http://schemas.android.com/tools"*，它可以让工具提取XML文件的信息，并且在打包APK的时候去除掉此命名空间下的元素和属性，这样就不会影响运行时了。
 根据Android Tools的官网，下面举几个常用的例子：
+
 - tools:**ignore**
 这个属性可以用于任意XML元素，是以逗号分隔的Lint工具检查项目的ID，它会忽略此元素及其子元素中相应的Lint检查。
 
@@ -59,6 +60,7 @@ Android还有另外一个常用的命名空间，URI是*"http://schemas.android.
 ```
 
 Used by: Lint
+
 - tools:**targetApi**
 这个属性和Java类中的*@TargetApi*注解类似，用于指定XML元素运行的API等级，可以使用API等级的整数或者名称表示。
 
@@ -68,6 +70,7 @@ Used by: Lint
 ```
 
 Used by: Lint
+
 - tools:**locale**
 用于资源文件的根节点，指定资源的语言或者地区。
 
@@ -78,6 +81,7 @@ Used by: Lint
 ```
 
 Used by: Lint, Studio(关闭非英语资源文件的拼写检查)
+
 - tools:**context**
 通常用于XML布局文件的根节点，告诉工具这个布局文件是被哪个Activity使用（设计阶段，并非运行时）。这样做可以告诉Layout Editor此布局文件可以使用关联Activity的theme，我们就可以看到对应theme下此布局实时渲染的效果。
 
@@ -89,6 +93,7 @@ Used by: Lint, Studio(关闭非英语资源文件的拼写检查)
 ```
 
 Used by: Layout Editor in Studio & Eclipse, Lint
+
 - tools:**layout**
 我们通常都是动态使用Fragment类的，其实也可以直接在布局文件中使用fragment标签，此时，可以使用这个属性查看Fragment的对应布局的渲染效果。注意，这只是作为设计阶段的辅助，运行时你可以加载其它任意布局文件。
 
@@ -99,6 +104,7 @@ Used by: Layout Editor in Studio & Eclipse, Lint
 ```
 
 Used by: Layout Editor in Studio & Eclipse
+
 - tools:**listitem | listheader | listfooter**
 这个属性可以用于AdapterView的子类，包括ListView, GridView和ExpandableListView等，告诉工具在设计阶段列表渲染使用的item布局，header和footer的布局。
 
@@ -111,6 +117,7 @@ Used by: Layout Editor in Studio & Eclipse
 ```
 
 Used by: Layout Editor in Studio & Eclipse
+
 - tools:**showIn**
 为了方便布局的复用，我们会include某些公用的布局文件。在公用的布局文件的根元素中使用这个属性，可以在合适的上下文，也就是外围布局中渲染这个布局，看到全部的效果。
 
@@ -125,6 +132,7 @@ Used by: Layout Editor in Studio & Eclipse
 ```
 
 Used by: Layout Editor in Studio
+
 - tools:**menu**
 这个属性告诉工具Action Bar使用的菜单资源文件。
 
@@ -139,6 +147,7 @@ Used by: Layout Editor in Studio
 ```
 
 Used by: Layout Editor in Studio
+
 - tools:**actionBarNavMode**
 这个属性告诉工具Action Bar的导航模式，包括*"standard"*,*"list"*,*"tabs"*三种。
 
@@ -154,7 +163,7 @@ Used by: Layout Editor in Studio
 
 Used by: Layout Editor in Studio
 
-####Designtime Layout Attributes
+###Designtime Layout Attributes
 既然我们上面说到的命名空间只是在设计时起作用，我们可以更进一步，覆写Framework提供的View的属性，只是在设计阶段查看界面渲染的效果，打包的时候会被去除，所以不会影响运行时。
 
 要使用这个功能，和上面一样，首先需要在布局的根元素中加入此命名空间的声明。然后，可以把所有原来以 *android:* 前缀开始的View的属性改为 *tools:* 前缀。而且，这两个命名空间下的属性可以同时出现，一个是设计阶段起作用，一个是运行时起作用，互不影响。
@@ -187,7 +196,7 @@ Used by: Layout Editor in Studio
 
 这样我们就可以在工具渲染布局的时候动态控制View的可见性，十分方便。
 
-###在Android中自定义命名空间
+##在Android中自定义命名空间
 上面说的都是Android的Framework和开发工具定义的XML命名空间，我们来看看自定义XML命名空间的应用。我们在Android的开发中，偶尔会需要自定义View，自定义的View都是继承自Framework的 *android.view.View* 类或者它的子类。这个时候，如果我们想要除了Framework提供的属性以外的属性，就会用到自定义命名空间。
 
 首先，我们继承 *View* 类，并提供接受 *Context* 和 *AttributeSet* 作为参数的构造方法，这样就可以在XML布局中直接使用自定义View了。
@@ -201,6 +210,7 @@ class PieChart extends View {
 ```
 
 如果我们想要自定义属性，并且可以在XML布局文件中直接使用，请遵守以下4条：
+
 - 在```<declare-styleable>```资源元素下定义自定义属性
 - 在XML布局中声明属性值
 - 在运行时获取属性值
@@ -268,7 +278,8 @@ public void setShowText(boolean showText) {
 
 注意，为了保证View处于正确的状态，上面的代码调用了 *invalidate()* 和 *requestLayout()* 两个方法。这样，你就可以在自定义的View类中根据自定义的属性控制View的行为了。 
 
-参考资料：
+###参考资料：
+
 1. [Namespaces in XML 1.0 (Third Edition)](http://www.w3.org/TR/REC-xml-names/)
 2. [Android Tools Project Site - Tools Attributes](http://tools.android.com/tech-docs/tools-attributes#TOC-tools:context>)
 3. [Android Tools Project Site - Designtime Layout Attributes](http://tools.android.com/tips/layout-designtime-attributes)
