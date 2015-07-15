@@ -1,0 +1,41 @@
+# Site settings
+title:       BitRandom
+email:       gejiaheng@gmail.com
+author:      GeJiaheng
+description: "GeJiaheng's Blog"
+baseurl:     ""
+url:         "http://gejiaheng.github.io"
+timezone: Asia/Beijing
+
+# Google analytics
+google_analytics: 
+
+# Optional features
+animated:           false
+show_related_posts: false
+show_post_footers:  false
+
+# Disqus post comments
+# (leave blank to disable Disqus)
+disqus_shortname: gejiaheng
+
+# Social icons
+show_social_icons: true
+github_username: gejiaheng
+stackoverflow_id:
+twitter_username: 
+linkedin_username: 
+weibo_id:  
+instagram_username: 
+behance_id: 
+
+
+# Build settings
+markdown:     redcarpet
+redcarpet:
+  extensions: ['smart', 'tables', 'with_toc_data']
+permalink:    pretty
+paginate:     5
+paginate_path: "/page:num/"
+sass:
+  compressed: true
