@@ -3,7 +3,7 @@ layout:     post
 title:      Activity 和 Fragment 的通信
 category:   []
 tags: [Android]
-published: False
+published: True
 date: 2015-08-31
 summary: Activity 和 Fragment 通信的方法以及解耦
 ---
@@ -11,6 +11,7 @@ summary: Activity 和 Fragment 通信的方法以及解耦
 Fragment 让 Android 页面逻辑的开发更加方便，更重要的是，它可以做到代码的可复用。通常来讲，Fragment 是和 Activity 结合起来使用的，在一个 Activity 中，通过不同的 Fragment 可以对页面进行方便的管理。
 
 一般，我们会通过以下两种方式向 Activity 中添加 Fragment：
+
 - 在 XML 布局文件中声明 fragment 节点
 - 直接在代码中通过 Activity 的 FragmentManager 动态添加
 
@@ -113,6 +114,7 @@ public class HostActivity extends Activity implements ConcreteFragment.Iface {
 ```
 
 上面的实现可以概括为以下几点：
+
 1. 在 Fragment 中定义接口，当然也可以定义在单独的 java 文件中，不过如果不是通用的接口，建议还是定义在上下文中；
 2. 在 Fragment 的 onAttach() 方法中对宿主 Activity 的类型进行检查，需要强制使用这个 Fragment 的 Activity 实现上面第一步中定义的接口。如果类型错误，则直接抛出异常，这种提前检查抛异常的方式在 SDK 的编写中非常常见，是一种强制性的约束。如果不这么做，则需要在调用接口方法的时候进行类型判断和转型，不推荐这样做；
 3. 需要使用这个 Fragment 的 Activity 实现第一歩中定义的接口。
