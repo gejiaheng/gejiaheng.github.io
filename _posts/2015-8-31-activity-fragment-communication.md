@@ -1,11 +1,7 @@
 ---
 layout:     post
 title:      Activity 和 Fragment 的通信
-category:   []
-tags: [Android]
-published: True
-date: 2015-08-31
-summary: Activity 和 Fragment 通信的方法以及解耦
+date: '2015-08-31'
 ---
 
 Fragment 让 Android 页面逻辑的开发更加方便，更重要的是，它可以做到代码的可复用。通常来讲，Fragment 是和 Activity 结合起来使用的，在一个 Activity 中，通过不同的 Fragment 可以对页面进行方便的管理。

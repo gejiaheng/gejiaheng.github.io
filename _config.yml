@@ -1,41 +1,34 @@
-# Site settings
-title:       BitRandom
-email:       gejiaheng@gmail.com
-author:      GeJiaheng
-description: "GeJiaheng's Blog"
-baseurl:     ""
-url:         "http://gejiaheng.github.io"
-timezone: Asia/Beijing
+# Dependencies
+markdown:         kramdown
+highlighter:      pygments
 
-# Google analytics
-google_analytics: 
+# Permalinks
+permalink:        pretty
+# relative_permalinks: true
 
-# Optional features
-animated:           false
-show_related_posts: false
-show_post_footers:  false
+# Setup
+title:            GeJiaheng
+description:      'I am an Android engineer, now working in Zhihu.'
+url:              gejiaheng.github.io
+baseurl:          /
+logo:             /content/images/me.png
 
-# Disqus post comments
-# (leave blank to disable Disqus)
+author:
+  name:           'GeJiaheng'
+  url:            https://plus.google.com/+JiahengGe
+
+paginate:         5
+
 disqus_shortname: gejiaheng
 
-# Social icons
-show_social_icons: true
-github_username: gejiaheng
-stackoverflow_id:
-twitter_username: 
-linkedin_username: 
-weibo_id:  
-instagram_username: 
-behance_id: 
+github:
+  repo:           https://github.com/gejiaheng/gejiaheng.github.io
+
+gems:             [jekyll-paginate, jekyll-gist, jekyll-sitemap]
 
 
-# Build settings
-markdown:     redcarpet
-redcarpet:
-  extensions: ['smart', 'tables', 'with_toc_data']
-permalink:    pretty
-paginate:     5
-paginate_path: "/page:num/"
-sass:
-  compressed: true
+twitter: '@GeJiaheng'
+
+kramdown:
+  # Enable GitHub Flavored Markdown (fenced code blocks)
+  input: GFM

@@ -1,11 +1,9 @@
 ---
 layout:     post
 title:      Java 中的 void 是基础数据类型吗
-category:   []
-tags: [Tech]
 published: True
-date: 2015-04-11
-summary: 简单讨论一下 Java 中的 void 是否是基础数据类型
+date: '2015-04-11'
+cover_image: '/content/images/2015/4/scaffolding.jpg'
 ---
 
 Java是面向对象的编程语言，它主要包含两种数据类型，**引用类型 （Reference types）**和**基础数据类型 （Primitive types）**，普通的类（Class）、枚举类型、数组、接口（interface）都属于引用类型，而基础数据类型就是 boolean，byte，short，int，long，char，float，double。偶然的机会，看到有人讨论 void 是否属于 Java 中的基础数据类型。这是一个很有意思的问题，于是查了一些资料，并且自己动手写代码验证了一下。

@@ -1,24 +1,48 @@
 ---
 layout: default
+title: Home
 ---
 
-<div class="home">
-<div class="post-by-tag"><a href="{{ site.baseurl | append: '/tags/'}}" style="font-size: 0.6em">Posts by Tag</a></div>
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
 
-  <div class="posts">
- 
-    {% for post in paginator.posts %}
-      <div class="post">
-        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-          
-          <h4 class="h4 post-title">{{ post.title }}</h4>
-          <p class="post-summary">{{ post.summary }}</p>
-          <!--<p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>-->
-        </a>
-      </div>
-    {% endfor %}
+    {% if post.cover_image %}
+    <div class="post-overlay-header" style="background-image: url({{ post.cover_image }})">
+    <div class="post-overlay-header-title">
+    {% endif %}
+
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
+    {% if post.cover_image %}
+    </div>
+    </div>
+    {% endif %}
+
+    {{ post.content | strip_html | truncatewords:10 }}
   </div>
+  {% endfor %}
+</div>
 
-  {% include pagination.html %}
-  
+<div class="pagination">
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
 </div>

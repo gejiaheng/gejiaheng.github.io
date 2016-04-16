@@ -1,11 +1,7 @@
 ---
 layout:     post
 title:      对 Constant interface 的一些思考
-category:   []
-tags: [Tech]
-published: True
-date: 2015-08-15
-summary: Java 中对 Constant interface 的错误使用以及如何更好的定义常量
+date: '2015-08-15'
 ---
 
 ###Constant interface简介

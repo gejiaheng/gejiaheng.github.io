@@ -1,11 +1,8 @@
 ---
 layout:     post
 title:      XML namespace in Android
-category:   []
-tags: [Android]
 published: True
-date: 2015-04-19
-summary: 简单介绍一下 Android 中 XML 文件的命名空间是什么以及如何使用
+date: '2015-04-19'
 ---
 
 使用 Android Studio 创建 Project 时，默认的 MainActivity 的布局文件 activity_main.xml 如下：
