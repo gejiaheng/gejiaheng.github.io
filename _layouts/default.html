@@ -1,17 +1,36 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
 
-  {% include head.html %}
+{%- include head.html -%}
 
-  <body>
+<body>
 
-    {% include sidebar.html %}
+  {%- include header.html -%}
 
-    <div class="content container">
-      {{ content }}
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+
+      {%- include about.html -%}
+
+      {%- if site.data.projects.size > 0 -%}
+        {%- include projects.html -%}
+      {%- endif -%}
+
+      {%- if site.data.experience.size > 0 -%}
+        {%- include experience.html -%}
+      {%- endif -%}
+
+      {%- if site.data.education.size > 0 -%}
+        {%- include education.html -%}
+      {%- endif -%}
+
+      {%- include more.html -%}
+
     </div>
+  </main>
 
-    {% include footer.html %}
+  {%- include footer.html -%}
 
-  </body>
+</body>
+
 </html>
