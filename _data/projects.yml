@@ -1,8 +1,17 @@
 # Project template
-- name: Project name
-  link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-  github: Github page for project (eg. sproogen/modern-resume-theme)(optional)
+- name: Zhihu Android App
+  link: www.zhihu.com/app/
+  github:
   quote: >
-    Short overview of the project (optional)
-  description: | # this will include new lines to allow paragraphs
-    Description about the work on/with the project
+  description: |
+    This app comes with great design and smooth user experience. 
+    I was the core Android engineer in the team and later became the Tech Lead of the Android Infrastructure Team.
+
+- name: iQIYI Android App
+  link: store.iqiyi.com/web/iqiyi/detail/mobile.action
+  github: 
+  quote: >
+  description: |
+    The great challenge me and the team faced was that the app had a DAU over 100 million. 
+    Besides, I wrote a dynamic UI framework called Card for it.
+    

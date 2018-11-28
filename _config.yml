@@ -3,34 +3,34 @@ repository: Git repository where your resume will be hosted, only required if yo
 # favicon: Directory of your favicon (eg. images/favicon.ico)(optional)
 
 # Personal info
-name: Your Name
-title: Your job title
-email: Your email (optional)
-website: Your website (optional)
+name: Jiaheng Ge
+title: Android Developer
+email: gejiaheng@gmail.com
+website: jiaheng.me
 
 # Social links
-twitter_username: jekyllrb
-github_username:  jekyll
-dribbble_username: jekyll
-facebook_username: jekyll
-flickr_username: jekyll
-instagram_username: jekyll
-linkedin_username: jekyll
-pinterest_username: jekyll
-youtube_username: jekyll
-googleplus_username: +jekyll
+twitter_username: GeJiaheng
+github_username:  gejiaheng
+linkedin_username: jiaheng-ge-820b2879
+medium_user: gejiaheng
+zhihu_username: bitrandom
+# dribbble_username:
+# facebook_username:
+# flickr_username:
+# instagram_username:
+# pinterest_username:
+# youtube_username:
+# googleplus_username:
 
 # About Section
 # about_title: About Me (Use this to override about section title)
-about_profile_image: Directory of profile image (eg. images/profile.jpg)
-about_content: | # this will include new lines to allow paragraphs
-  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
+about_profile_image: images/avatar.png
+about_content: | 
+  Hi, my name is Jiaheng Ge, I'm an <mark>Android developer</mark> with over 5 years experience. I'm passionate about creating smooth and reliable user experience for Android apps.
+  I focused on mobile engineering productivity and app infrastructure in the last job experience as Android infrastructure team's tech lead.
 
-  You can even add paragraphs by using empty lines like this and add anything else markdown supports such as
-    - Lists
-    - Tables
-    - Links
-    - Images
+  Aside from mobile development, I spend a lot of time expanding my technical horizons in fields including <mark>AI</mark> and <mark>IoT</mark>. 
+  I'm excited about making technology accessible and empowering engineers to solve valuable problems for people.
 
 # Projects Section
 # projects_title: Projects #(Use this to override about projects section title)
@@ -42,11 +42,15 @@ about_content: | # this will include new lines to allow paragraphs
 # educaton_title: Education #(Use this to override about education section title)
 
 # More Section
-# more_title: A Little More About Me #(Use this to override about more section title)
-more_content: | # this will include new lines to allow paragraphs
-  This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
+more_title: When I'm Not Programming
+more_content: |
+  I love watching all kinds of movies. My favourite movie star is Christain Bale. I've dreamed about becoming a film director. 
+  But unfortunately, I don't have Ang Lee's talent. 
 
-  Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
+  Also, I love travelling and experiencing diffrent cultures. I've been to USA, Japan, Thailand and Australia. Not a lot of places, hum? Probably.
+  That's why my other big dream is to travel around the world.
+
+  "I wanted to live deep and suck out all the marrow of life."
 
 # Footer
 footer_show_references: true

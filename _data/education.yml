@@ -1,8 +1,14 @@
 # Education Template
-- name: Institution name
-  dates: Date Range (eg. 2016 - 2019)
-  qualification: Qualifications (eg. BA Performing Arts)
+- name: Wuhan University
+  dates: 2012 - 2014
+  qualification: Master of Software Engineering
   quote: >
-    Short institution or course description (optional)
-  description: | # this will include new lines to allow paragraphs
-    Description of qualification
+  description: | 
+    Finished all the courses in half a year and mainly worked as an intern in iQIYI (www.iqiyi.com) which is one of the best and largest online video service providers in China.
+
+- name: Wuhan University
+  dates: 2007 - 2011
+  qualification: Bachelor of Software Engineering
+  quote: >
+  description: | 
+    Was once the vice minister of the Student Union and the monitor of the class.

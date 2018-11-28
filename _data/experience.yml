@@ -1,9 +1,44 @@
 # Experience template
-- company: Company name
-  link: Link to company (optional)
-  job_title: Job title
-  dates: Date Range (eg. November 2016 - present)
+- company: Zhihu
+  link: www.zhihu.com
+  job_title: Tech Lead, Android Infrastructure Team
+  dates: July 2017 - July 2018
   quote: >
-   Short description of the company (optional)
-  description: | # this will include new lines to allow paragraphs
-    Description of role
+   Zhihu is the largest online knowledge sharing platform in China. https://en.wikipedia.org/wiki/Zhihu.
+  description: | 
+    - Leading Android modularization project to support all products' development. 
+    - Leading team to develop and maintain scalable infrastructures and platforms. 
+    - Keep improving engineering productivity. 
+    - Build master of Android team. 
+    - Arrange team tech talks.
+
+- company: Zhihu
+  link: www.zhihu.com
+  job_title: Android Engineer
+  dates: November 2015 - June 2017
+  quote: >
+   Zhihu is the largest online knowledge sharing platform in China. https://en.wikipedia.org/wiki/Zhihu.
+  description: | 
+    - Participated in complete rewrite of Zhihu Android app v3.0. 
+    - Managed Android team of Zhihu community product line for three month.
+
+- company: iQIYI
+  link: www.iqiyi.com
+  job_title: Android Engineer
+  dates: June 2014 - October 2015
+  quote: >
+   iQIYI is one of the largest online video streaming service providers in China. https://en.wikipedia.org/wiki/IQiyi.
+  description: | 
+    - Developed iQIYI Video App and some other video related Android Apps. 
+    - Wrote a dynamic UI framework called Card for iQIYI Video App. 
+    - Kept improving Android App's performance and architecture.
+
+- company: iQIYI
+  link: www.iqiyi.com
+  job_title: Android Intern
+  dates: June 2013 - June 2014
+  quote: >
+   iQIYI is one of the largest online video streaming service providers in China. https://en.wikipedia.org/wiki/IQiyi.
+  description: | 
+    - Developed iQIYI Video App of both phone and tablet versions. 
+    - Involved in cooperation with some smart phone manufacturers including Samsung, Huawei, Lenovo, BlackBerry, etc.
